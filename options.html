@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DropSlop options</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="options">
+<main>
+  <h1>DropSlop options</h1>
+  <p>A key is optional. Without one you get a few free checks a day. With one, checks use your plan's allowance and longer texts are accepted. Get a key at <a href="https://dropslop.ai/keys/" target="_blank" rel="noopener">dropslop.ai/keys</a>.</p>
+  <label for="key">API key</label>
+  <input id="key" type="password" autocomplete="off" spellcheck="false">
+  <div class="actions"><button id="save" type="button">Save</button><button id="clear" type="button" class="quiet">Remove key</button></div>
+  <p id="msg" class="muted" role="status" aria-live="polite"></p>
+  <footer>The key is stored in this browser only and is sent only to dropslop.ai, with a check you asked for.</footer>
+</main>
+<script src="lib/core.js"></script>
+<script src="options.js"></script>
+</body>
+</html>

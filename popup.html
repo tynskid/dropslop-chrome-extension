@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DropSlop</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="popup">
+<main>
+  <h1>DropSlop</h1>
+  <p id="status" class="muted" role="status" aria-live="polite">Looking for selected text...</p>
+
+  <section id="paste" hidden>
+    <p class="muted">Nothing is selected on this page. Paste text here to check it.</p>
+    <label for="text" class="muted">Text to check</label>
+    <textarea id="text" placeholder="Paste text here"></textarea>
+    <div class="actions"><button id="go" type="button">Check this text</button></div>
+  </section>
+
+  <section id="error" hidden>
+    <p id="errmsg" class="error"></p>
+    <p id="keyhint" class="muted" hidden>You can add a key on the options page. Keys come from <a href="https://dropslop.ai/keys/" target="_blank" rel="noopener">dropslop.ai/keys</a>.</p>
+    <div class="actions"><button id="opt" type="button" class="quiet" hidden>Open options</button><button id="back" type="button" class="quiet">Paste text instead</button></div>
+  </section>
+
+  <section id="result" hidden>
+    <p class="score" id="score"></p>
+    <p class="muted" id="meta"></p>
+    <p class="muted" id="cadence" hidden></p>
+    <p id="none" hidden>No phrases flagged.</p>
+    <div class="list" id="list"></div>
+  </section>
+
+  <div class="actions"><a class="btn" id="full" href="https://dropslop.ai/editor/" target="_blank" rel="noopener">Open the full check on DropSlop</a></div>
+  <footer>Your text is sent to dropslop.ai only when you ask for a check. <a href="#" id="optlink">Options</a></footer>
+</main>
+<script src="lib/core.js"></script>
+<script src="popup.js"></script>
+</body>
+</html>
